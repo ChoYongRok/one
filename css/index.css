@@ -1,0 +1,368 @@
+@import url(common.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Montserrat', sans-serif;  */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+html{scroll-behavior: smooth;}
+/* 이동이 부드럽게 됨 */
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color:#333;
+
+}
+
+/* TOP Button */
+
+.top{
+  position: fixed;
+  right:30px;
+  bottom:30px;
+  /* top:90%;
+  left:95%;
+  transform: translate(-5%,-5%); */
+}
+
+.top a{
+  display: block; /* 블록 속성을 넣어야 탑바텀이 먹음 */
+  width: 60px;
+  height: 60px;
+  background: url(/image/top.png) no-repeat;
+  transition: 0.3s;
+}
+
+.top a:hover{
+  background: url(/image/top_on.png) no-repeat;
+}
+
+/* Header_____________________ */
+header{
+  width:100%;
+  height:80px;
+  background-color: #000;
+}
+
+nav{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb{
+  display: flex;
+}
+.gnb li{margin:0 15px;}
+.gnb li a{
+  color:#fff;
+  font-size:18px;
+  text-transform: capitalize;
+}
+.gnb li a:hover{
+  color:orange;
+}
+
+/* Main_____________________ */
+
+main{
+  width: 100%;
+  height: 600px;
+  background:url(../image/main.png) no-repeat center top;
+  background-size:cover;  
+}
+
+.caption{
+  height: inherit;
+  display: flex;
+  flex-direction: column; /* display:flex를 넣어서 가로배열이 됐을때 flex-direction: column을 넣어주면 세로로 배치가된다 */
+  justify-content: center;
+  align-items: center;
+}
+.caption h1{
+  font-family: "Century Gothic", arial;
+  color: goldenrod;
+  font-size: 70px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.caption strong{
+  color:#ddd;
+  font-weight: 400;
+  font-size:20px;
+  letter-spacing: -1px;
+}
+
+
+
+/* Section_____________________ */
+section{
+  width: 100%;
+  text-align: center;
+}
+section h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+section h3{
+  font-weight: 400;
+  font-size: 18px;
+  margin: 10px 0;
+  color:#777;
+}
+
+section>div{margin-top: 70px;} /* 태그>태그 자손선택자, 왼쪽태그는 섹션아래 첫번째 디브에만 적용한다는 뜻 */
+
+/* ///////// About */
+.ab_num{
+  width: 100%;
+  height: 250px;
+  background-color: #eee;
+  margin-top:30px;
+}
+.ab_num ul{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ab_num ul li span:nth-child(1){ /* icon font */
+  font-size: 60px;
+  color:#555;
+  vertical-align: top;
+}
+.ab_num ul li span:nth-child(2){
+  font-size:42px;
+  color:#555;
+  font-weight: 500;
+  padding-left:15px;
+}
+.ab_num ul li span:nth-child(3){
+  display: block;
+  font-size:20px;
+  color:#666;
+  padding-left: 60px;
+}
+
+/* ///////// Our skill */
+.stick{
+  width: 1200px;
+  margin: 80px auto 0; /* 상 좌우 하 */
+  overflow: hidden; /* float만 넣었을때 our service 텍스트가 올라와서 내려주기 위해 넣음 */
+}
+.stick div{
+  float:left;
+  width: 48%;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 30px;
+  overflow: hidden; /* bar에 보더라디우스 대신 오버플로우를 넣었음 */
+}
+.stick div:nth-child(2){float: right;}
+
+
+.stick div p.bar1{
+  width:85%;
+  height: 100%;
+  background-color: royalblue;
+}
+.stick div p.bar2{
+  width: 75%;
+  height: 100%;
+  background-color: yellowgreen;
+}
+
+.stick div p span{
+  color:#fff;
+  text-align: left;
+  display: block;
+  padding-left: 25px;
+  line-height: 40px;
+}
+/* ///////// Our service */
+.service_img{
+  width: 1200px;
+  margin:80px auto 0;
+}
+
+.service_img ul{
+  display: flex;
+  justify-content: space-between;
+}
+.service_img ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 2줄 이상인걸 변화(?) */
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ccc;
+}
+
+/* ///////// Our portfolio */
+#portfolio{
+  width: 100%;
+  height: 1000px;
+  background-color: #ccc;
+  padding-top: 70px;
+}
+.tabmenu{
+  /* border: 1px solid red; */
+  width: 1200px;
+  height: 100px;
+  margin:auto
+}
+.tabmenu ul{
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tabmenu ul li:first-child{
+  border-bottom:2px solid #09f;
+  padding: 0 30px; /* padding으로 width를 줌 */
+}
+
+.tabmenu ul li a{
+  color:#000;
+  text-transform: capitalize;
+}
+
+.tabimg{
+  width:1200px;
+  margin: auto;
+  /* border: 1px solid blue; */
+}
+
+
+/*  float를 이용해서 이미지 배치하기
+.tabimg ul{overflow: hidden;}
+
+.tabimg ul li{
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+.tabimg ul li:last-child,
+.tabimg ul li:nth-child(4){
+  margin-right:0;
+} */
+
+
+
+/* grid를 이용해서 이미지 배치하기 */
+.tabimg ul{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 30px;
+}
+
+
+
+
+
+/* ///////// Our team */
+
+.team_img{
+  width: 1200px;
+  height: 450px;
+  margin: auto;
+}
+.team_img ul{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team_img h4{
+  color: orange;
+  font-size: 18px;
+  font-weight: 500;
+  margin:10px 0;
+}
+
+/* ///////// Our blog */
+
+#blog{
+  height: 800px;
+  background-color: aliceblue;
+  padding-top: 70px
+}
+
+.blog_img{
+  width: 1200px;
+  height: 500px;
+  margin: 60px auto 0;
+}
+
+.blog_img ul{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+}
+.btitle{
+  /* border: 1px solid #000; */
+  width:80%;
+  margin: auto;
+}
+.btitle h5{
+  color:royalblue;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin:15px 0;
+}
+.btitle p{text-align: left;}
+
+.btitle a{
+  display: block;
+  margin-top:50px;
+  text-align: left;
+  text-decoration: underline;
+  color:#000;
+}
+/* BUTTON */
+
+.btn{
+  display: block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  margin: 70px auto 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.btn:hover{
+  border-color:#09f;
+  color:#09f;
+}
+/* Footer_____________________ */
+
+footer{
+  width:100%;
+  height: 120px;
+  background-color: #ddd;
+  text-align: center;
+  padding-top:50px;
+  color:#666;
+}
+address{
+  font-style: normal;
+  margin-top:20px;
+  color:#000;
+}
+address strong{color:crimson;}
